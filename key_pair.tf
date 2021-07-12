@@ -1,15 +1,9 @@
-resource "aws_key_pair" "automation" {
-  key_name   = "automation"
+resource "aws_key_pair" "class2" {
+  key_name   = "class2"
   public_key = file("~/.ssh/id_rsa.pub")
   tags = {
-      Name = "DevOps"
-  }
-}
-
-resource "aws_key_pair" "automation2" {
-  key_name   = "automation2"
-  public_key = file("~/.ssh/id_rsa.pub")
-  tags = {
-      Name = "DevOps"
+    Name      = "Web"
+    CreatedBy = "Engineer"
+    Team      = "DevOps"
   }
 }
